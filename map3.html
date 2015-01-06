@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>La`Zooz Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script>
+    <script>
+
+
+  // Create a simple map.
+  // Load a GeoJSON from the same server as our demo.
+  var markerClusterer = new MarkerClusterer();
+  function initialize() {
+    map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 3,
+        center: {lat: 20, lng: 0},
+        scrollwheel: false,
+        navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        draggable: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    markerClusterer.setMap(map);
+    google.maps.event.addListener(map.data, 'addfeature', function (e) {
+        if (e.feature.getGeometry().getType() === 'Point') {
+            var marker = new google.maps.Marker({
+                position: e.feature.getGeometry().get(),
+                title: e.feature.getProperty('name'),
+                map: map
+            });
+            // open the infoBox when the marker is clicked
+            google.maps.event.addListener(marker, 'click', function (marker, e) {
+                return function () {
+
+                    var myHTML = e.feature.getProperty('name');
+                    boxText.innerHTML = "<div style='text-align: center;'><b>" + myHTML + "</b></div>";
+                    infobox.setPosition(e.feature.getGeometry().get());
+                    infobox.setOptions({
+                        pixelOffset: new google.maps.Size(0, 0)
+                    });
+                    infobox.open(map);
+                };
+            }(marker, e));
+            markerClusterer.addMarker(marker);
+            bounds.extend(e.feature.getGeometry().get());
+            map.fitBounds(bounds);
+            map.setCenter(e.feature.getGeometry().get());
+        }
+    });
+    layer = map.data.loadGeoJson('https://client.lazooz.org/api_get_all_users_locations');
+    map.data.setMap(null);
+    google.maps.event.addListener(map, "click", function () {
+        infobox.close();
+    });
+}  
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Layer: Simple</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script>
+    <script>
+var map;
+function initialize() {
+  // Create a simple map.
+  map = new google.maps.Map(document.getElementById('map-canvas'), {
+    zoom: 4,
+    center: {lat: -28, lng: 137.883}
+  });
+  var markerClusterer = new MarkerClusterer(map);
+  google.maps.event.addListener(map.data, 'addfeature', function (e) { google.maps.event.addListener(map.data, 'addfeature', function (e) {
+        if (e.feature.getGeometry().getType() === 'Point') { markerClusterer.addMarker(marker);
+            var marker = new google.maps.Marker({ bounds.extend(e.feature.getGeometry().get());
+                position: e.feature.getGeometry().get(), map.fitBounds(bounds);
+                title: e.feature.getProperty('name'), map.setCenter(e.feature.getGeometry().get());
+                map: map }
+            });   
+    layer = map.data.addGeoJson('/geojson.json');
+    map.data.setMap(null);
+}
+google.maps.event.addDomListener(window, 'load', initialize); 
+</script>
+</head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>

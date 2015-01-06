@@ -1,0 +1,179 @@
+body {
+	font-family: 'Lato', 'Helvetica Neue Light', 'Helvetica Neue', 'Segoe UI', sans-serif;
+	font-size: 16px; /* 100% 1em */
+}
+/*--------------------------------------------------------------------*/
+	@media ( min-width: 1025px ) {
+		.theme-white.links a:hover {
+			color: rgb( 5, 67, 131 );
+			border-bottom: 1px rgba( 5, 67, 131, 0.5 ) solid;
+		}
+		.theme-white.links a:active,
+		.theme-white.links a:focus {
+			color: rgb( 5, 67, 131 );
+			border-bottom: 1px rgb( 5, 67, 131 ) solid;
+		}
+		.theme-white .grid.social-small a:hover,
+		.theme-white .grid.social-small a:active,
+		.theme-white .grid.social-small a:focus {
+			color: rgb( 5, 67, 131 ) !important;
+		}
+		.theme-white .nav-footer > li > a:hover,
+		.theme-white .nav-footer > li > a:focus,
+		.theme-white .nav-footer > li > a:active {
+			border-bottom: 2px rgba( 5, 67, 131, 0.2 ) solid;
+		}
+		.theme-white.works .tags a:active,
+		.theme-white.works .tags a:focus {
+			background-color: rgb( 5, 67, 131 );
+		}
+			.theme-white .btn:hover {
+				background-color: rgb( 5, 67, 131 ) !important;
+			}
+		/*/----------------------------------------------------------/*/
+			.theme-color .btn:hover {
+				color: rgb( 5, 67, 131 ) !important;
+			}
+	}
+/*--------------------------------------------------------------------*/
+.theme-white.foreground .caption.color {
+	color: rgb( 5, 67, 131 );
+}
+.theme-white.links a {
+	color: rgb( 5, 67, 131 );
+	border-bottom: 1px rgba( 5, 67, 131, 0.1 ) solid;
+}
+.theme-white.links a:link {
+	color: rgb( 5, 67, 131 );
+	border-bottom: 1px rgba( 5, 67, 131, 0.1 ) solid;
+}
+.theme-white.links a:visited {
+	color: rgb( 5, 67, 131 );
+	border-bottom: 1px rgba( 5, 67, 131, 0.1 ) solid;
+}
+.theme-white form .checkbox > input[type=checkbox]:checked + label:before {
+	background-color: rgb( 5, 67, 131 );
+}
+.theme-white form .radio > input[type=radio]:checked + label:before {
+	background-color: rgb( 5, 67, 131 );
+}
+.theme-white .blueimp a .overlay {
+	background-color: rgba( 5, 67, 131, 0.85 );
+}
+.theme-white .nav > li > a > .overlay {
+	background-color: rgba( 5, 67, 131, 0.3 );
+}
+.theme-white .menu.menu-dropdown > .active > a {
+	border-bottom: 2px rgba( 5, 67, 131, 0.3 ) solid !important;
+}
+.theme-white.works .grid li .overlay {
+	background-color: rgba( 5, 67, 131, 0.8 );
+}
+.theme-white.team .row > div > .wrapper > .overlay {
+	background-color: rgba( 5, 67, 131, 0.1 );
+}
+.theme-white .nav-footer > li > a,
+.theme-white .nav-footer > li > a:link,
+.theme-white .nav-footer > li > a:active,
+.theme-white .nav-footer > li > a:visited {
+	color: rgb( 5, 67, 131 );
+}
+.theme-white a.more div.arrow {
+	border-top: 1px rgb( 5, 67, 131 ) solid;
+}
+.theme-white a.more div.arrow span.tip {
+	border-color: transparent transparent transparent rgb( 5, 67, 131 );
+}
+.theme-white.works .tags a.active {
+	background-color: rgb( 5, 67, 131 );
+}
+.theme-white.blog .comment .entry-meta .reply {
+	color: rgb( 5, 67, 131 );
+}
+.theme-white.faq .accordion .caption-wrapper .sign:before {
+	color: rgb( 5, 67, 131 );
+}
+.theme-white.pricing .package,
+.theme-white.pricing .package:link,
+.theme-white.pricing .package:hover,
+.theme-white.pricing .package:active,
+.theme-white.pricing .package:focus,
+.theme-white.pricing .package:visited {
+	background-color: rgb( 5, 67, 131 );
+	border-color: rgb( 5, 67, 131 );
+}
+	.theme-white .btn {
+		color: rgb( 5, 67, 131 ) !important;
+		border: 2px rgb( 5, 67, 131 ) solid !important;
+	}
+	.theme-white .btn:active/*,
+	.theme-white .btn:focus*/ {
+		background-color: rgba( 5, 67, 131, 0.9 ) !important;
+	}
+/*--------------------------------------------------------------------*/
+.theme-color.background {
+	background-color: rgb( 5, 67, 131 );
+}
+.theme-color .underlay {
+	background-color: rgba( 5, 67, 131, 0.95 );
+}
+.theme-color.pricing .underlay {
+	background-color: rgba( 5, 67, 131, 0.5 );
+}
+.theme-color form .checkbox > input[type=checkbox]:checked + label:before {
+	color: rgb( 5, 67, 131 );
+}
+.theme-color form .radio > input[type=radio]:checked + label:before {
+	color: rgb( 5, 67, 131 );
+}
+.theme-color .menu.menu-dropdown {
+	background-color: rgb( 5, 67, 131 );
+}
+.theme-color.faq .accordion .caption-wrapper .caption {
+	background-color: rgb( 5, 67, 131 );
+}
+.theme-color.faq .accordion .caption-wrapper .sign:before {
+	background-color: rgb( 5, 67, 131 );
+}
+.theme-color .menu .dropdown-slide {
+	background-color: rgba( 5, 67, 131, 0.97 );
+}
+	.theme-color .btn:active/*,
+	.theme-color .btn:focus*/ {
+		color: rgb( 5, 67, 131 ) !important;
+	}
+	.theme-color .aside.search .overlay {
+		background-color: rgba( 5, 67, 131, 0.9 );
+	}
+/*--------------------------------------------------------------------*/
+	.theme-white.links a.demo.white,
+	.theme-white.links a.demo.link.white {
+		color: rgb( 5, 67, 131 ) !important;
+		border-bottom: 1px rgba( 5, 67, 131, 0.1 ) solid !important;
+	}
+	.theme-white.links a.demo.hover.white {
+		color: rgb( 5, 67, 131 ) !important;
+		border-bottom: 1px rgba( 5, 67, 131, 0.5 ) solid !important;
+	}
+	.theme-white.links a.demo.active-focus.white {
+		color: rgb( 5, 67, 131 ) !important;
+		border-bottom: 1px rgb( 5, 67, 131 ) solid !important;
+	}
+	.theme-white.links a.demo.visited.white {
+		color: rgb( 5, 67, 131 ) !important;
+		border-bottom: 1px rgba( 5, 67, 131, 0.1 ) solid !important;
+	}
+	.theme-white input[type=submit].btn.demo.hover.white {
+		background-color: rgb( 5, 67, 131 ) !important;
+	}
+	.theme-white input[type=submit].btn.demo.active-focus.white {
+		background-color: rgba( 5, 67, 131, 0.9 ) !important;
+	}
+/*--------------------------------------------------------------------*/
+	.theme-color input[type=submit].demo.hover.color {
+		color: rgb( 5, 67, 131 ) !important;
+	}
+	.theme-color input[type=submit].demo.active-focus.color {
+		color: rgb( 5, 67, 131 ) !important;
+	}
+/*--------------------------------------------------------------------*/

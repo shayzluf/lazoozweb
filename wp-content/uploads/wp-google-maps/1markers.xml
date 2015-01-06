@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<markers>
+  <marker>
+    <marker_id>1</marker_id>
+    <map_id>1</map_id>
+    <title></title>
+    <address>California</address>
+    <desc></desc>
+    <pic></pic>
+    <icon></icon>
+    <linkd></linkd>
+    <lat>36.778261</lat>
+    <lng>-119.4179323999</lng>
+    <anim></anim>
+    <category>0</category>
+    <infoopen></infoopen>
+  </marker>
+</markers>
