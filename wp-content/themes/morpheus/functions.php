@@ -62,3 +62,8 @@ load_template(trailingslashit(get_template_directory()) . 'functions/theme-optio
 
 //demo install
 load_template(trailingslashit(get_template_directory()) . 'demo/importer.php');
+function show_public_key($order){
+    echo "<p><strong>Public Key is:</strong> ".get_post_meta($order->post->ID,'_billing_public_key',true)."</p>";
+}
+
+add_action( 'woocommerce_admin_order_data_after_billing_address', 'show_public_key', 10, 1 );
